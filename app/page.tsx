@@ -1,4 +1,3 @@
-import Lastcheck from "@/components/lastcheck";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,7 +7,9 @@ export default function Home() {
       <div className="mt-4 text-gray-400">
         Days since the last War Thunder leak
       </div>
-      <Lastcheck />
+      <div className="absolute top-4 right-4 text-sm text-gray-400">
+        Last checked: {new Date().getMinutes()} minutes ago
+      </div>
       <div className="absolute bottom-4 left-4 text-sm text-gray-500">
         <p>
           This page is not affiliated with Gaijin Entertainment or War Thunder.

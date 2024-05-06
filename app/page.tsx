@@ -3,7 +3,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
-      <div className="text-9xl font-extrabold">365</div>
+      <div className="text-9xl font-extrabold">
+        {Math.floor(
+          (new Date().getTime() - new Date("2023-12-12").getTime()) /
+            (1000 * 60 * 60 * 24)
+        )}
+      </div>
       <div className="mt-4 text-gray-400">
         Days since the last War Thunder leak
       </div>

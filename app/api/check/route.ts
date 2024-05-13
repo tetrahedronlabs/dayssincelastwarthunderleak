@@ -12,7 +12,9 @@ export async function GET(request: NextRequest) {
       status: 401,
     });
   }
-  const response = await fetch("https://en.wikipedia.org/wiki/War_Thunder");
+  const response = await fetch("https://en.wikipedia.org/wiki/War_Thunder", {
+    cache: "no-store",
+  });
   const html = await response.text();
   const $ = cheerio.load(html);
   const table = $(".sortable");

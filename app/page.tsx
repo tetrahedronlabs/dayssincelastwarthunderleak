@@ -1,13 +1,14 @@
-export const dynamic = 'force-dynamic';
-
+export const dynamic = "force-dynamic";
+import { get } from "@vercel/edge-config";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const latestDate = await get("latestDate");
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
       <div className="text-9xl font-extrabold">
         {Math.floor(
-          (new Date().getTime() - new Date("2023-12-12").getTime()) /
+          (new Date().getTime() - new Date(latestDate as number).getTime()) /
             (1000 * 60 * 60 * 24)
         )}
       </div>

@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <Script
         src="https://analytics.tetrahedron.dev/script.js"
-        data-website-id="e6d6d6dc-6a30-4a2d-bd50-cc29b1ae5bcf"
+        data-website-id="7bbf36ec-2c73-405e-8c0f-8ef83d7208cb"
       />
       <body className={GeistSans.className}>{children}</body>
     </html>

@@ -15,3 +15,9 @@ pnpm dev
 # or
 bun dev
 ```
+Then, fill in the corresponding environment variables:
+
+```bash
+EDGE_CONFIG=
+VERCEL_API_TOKEN=
+```

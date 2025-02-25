@@ -5,7 +5,7 @@ import Link from "next/link";
 export default async function Home() {
   const latestDate = await get("latestDate");
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center h-screen bg-zinc-900 font-mono text-white">
       <div className="text-9xl font-extrabold">
         {Math.floor(
           (new Date().getTime() - new Date(latestDate as number).getTime()) /
@@ -15,10 +15,10 @@ export default async function Home() {
       <div className="mt-4 text-gray-400">
         Days since the last War Thunder leak
       </div>
-      <div className="absolute top-4 right-4 text-sm text-gray-400">
+      <div className="absolute top-4 right-4 text-sm text-zinc-400">
         Last checked: {new Date().getMinutes()} minutes ago
       </div>
-      <div className="absolute bottom-4 left-4 text-sm text-gray-500">
+      <div className="absolute bottom-4 left-4 text-sm text-zinc-500">
         <p>
           This page is not affiliated with Gaijin Entertainment or War Thunder.
         </p>

@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import Link from "next/link";
+import Link from "@/node_modules/next/link";
 
 export default async function Home() {
   let daysSinceLastLeak = 0;

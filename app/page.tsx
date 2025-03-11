@@ -28,7 +28,7 @@ export default async function Home() {
         Days since the last War Thunder leak
       </div>
       <div className="absolute top-4 right-4 text-sm text-zinc-400">
-        Last checked: {Math.floor(new Date().getMinutes() / 5)} minutes ago
+        Last checked: {5 - (new Date().getMinutes() % 5)} minutes ago
       </div>
       <div className="absolute bottom-4 left-4 text-sm text-zinc-500">
         <p>
